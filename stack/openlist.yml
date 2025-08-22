@@ -1,4 +1,5 @@
-# OpenList
+# OpenList - https://github.com/OpenListTeam/OpenList
+
 services:
   openlist:
     image: 'openlistteam/openlist:latest'
