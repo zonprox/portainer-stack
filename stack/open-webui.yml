@@ -1,5 +1,4 @@
 # OpenWebUI - https://github.com/open-webui/open-webui
-version: "3.8"
 
 services:
   open-webui:
