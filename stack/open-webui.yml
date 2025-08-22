@@ -1,0 +1,20 @@
+# OpenWebUI - https://github.com/open-webui/open-webui
+version: "3.8"
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    volumes:
+      - open-webui:/app/backend/data
+    ports:
+      - "8888:8080"
+    environment:
+      - WEBUI_SECRET_KEY=xxx # Generater your secret key
+      - ENABLE_OLLAMA=false # If you don't use Ollama
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
+
+volumes:
+  open-webui:
